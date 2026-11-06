@@ -1,0 +1,6 @@
+WORK_DIR=$(pwd)
+if [ $WORK_DIR == $HOME ]; then
+	echo "[ERROR] bad location $WORK_DIR"
+else
+	docker run -v $(pwd):/home/nekRS/project nekrs $@
+fi
